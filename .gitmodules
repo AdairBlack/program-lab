@@ -1,0 +1,3 @@
+[submodule "cpp-lab/library/boost-asio"]
+	path = cpp-lab/library/boost-asio
+	url = git@github.com:boostorg/asio.git
