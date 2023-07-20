@@ -7,6 +7,14 @@
 
 #define PROJECT_NAME "emm"
 
+void addComponentTest(MaterialManagerSpace::MaterialManager &materialManager)
+{
+    for (int i = 0; i < 14; i++)
+    {
+        materialManager.addComponent("CompPN" + std::to_string(i), "QNsdfjksf123_" + std::to_string(i), "A simple component number" + std::to_string(i) + ".");
+    }
+}
+
 int main(int argc, char **argv)
 {
     printf("This is project %s.\n", PROJECT_NAME);
@@ -17,11 +25,7 @@ int main(int argc, char **argv)
     }
 
     auto &materialManager = MaterialManagerSpace::MaterialManager::getInstance();
-
-    for (int i = 0; i < 14; i++)
-    {
-        materialManager.addComponent("CompPN" + std::to_string(i), "QNsdfjksf123_" + std::to_string(i), "A simple component number" + std::to_string(i) + ".");
-    }
+    addComponentTest(materialManager);
 
     auto &controlPanel = ControlPanelSpace::ControlPanel::getInstance();
 
