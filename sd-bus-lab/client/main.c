@@ -39,5 +39,5 @@ finish:
     sd_bus_message_unref(m);
     sd_bus_unref(bus);
 
-    return ret < 0 ? EXIT_FAILURE : EXIT_SUCCESS;
+    return ret < 0 ? -1 : 0;
 }

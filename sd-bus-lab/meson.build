@@ -5,9 +5,13 @@ project('dbus_example',
 systemd_dep = dependency('libsystemd')
 
 executable('client', 
-            'client.c', 
+            'client/main.c', 
             dependencies : systemd_dep)
 
 executable('server', 
-            'server.c', 
+            'server/main.c', 
+            dependencies : systemd_dep)
+
+executable('simple', 
+            'simple/main.c', 
             dependencies : systemd_dep)
